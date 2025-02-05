@@ -42,7 +42,7 @@ Content-Type: application/json
 
 ### Exercise 2: JWT Auth_Posts
 GET http://localhost:3000/exercise2/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxIiwiaWF0IjoxNzM4NzEyOTc0LCJleHAiOjE3Mzg3MTM4NzR9.ZMtTtR1F5Pn4Z_pkATl5_eWeSus_jss6HFgFkz33Vxc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxIiwiaWF0IjoxNzM4NzE3NDIyLCJleHAiOjE3Mzg3MTgzMjJ9.0jUOnA9minIrAOnivt4xQeMMxHwIxrvcsph48iVyIRY
 
 
 
