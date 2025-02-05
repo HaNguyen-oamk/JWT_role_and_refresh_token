@@ -1,0 +1,114 @@
+
+### Exercise 1a
+###
+http://localhost:3000/exercise1a/httpbasic
+
+
+### Exercise 1b
+###
+GET http://localhost:3000/exercise1b/public
+
+### Test Exercise1b HTTP Basic
+GET http://localhost:3000/exercise1b/httpbasic
+Authorization: Basic aGVsbG86d29ybGQ=
+
+
+###
+GET http://localhost:3000/exercise1b/anotherhttpbasic
+Authorization: Basic aGVsbG86d29ybGQ=
+
+
+### Exercise 1c
+###
+GET http://localhost:3000/exercise1c/public
+
+###
+GET http://localhost:3000/exercise1c/httpbasic
+Authorization: Basic aGVsbG86d29ybGQ=
+
+###
+GET http://localhost:3000/exercise1c/anotherhttpbasic
+Authorization: Basic aGVsbG86d29ybGQ=
+
+
+### Exercise 2: JWT Auth_Sign In
+POST http://localhost:3000/exercise2/signin
+Content-Type: application/json
+
+{
+  "username": "test1",
+  "password": "password1"
+}
+
+### Exercise 2: JWT Auth_Posts
+GET http://localhost:3000/exercise2/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxIiwiaWF0IjoxNzM4NzEyOTc0LCJleHAiOjE3Mzg3MTM4NzR9.ZMtTtR1F5Pn4Z_pkATl5_eWeSus_jss6HFgFkz33Vxc
+
+
+
+### Exercise 3: Sign in by admin
+POST http://localhost:3000/exercise3/signin
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "adminpass"
+}
+
+### Exercise 3: Post by admin
+GET http://localhost:3000/exercise3/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM4NzEzNTIwLCJleHAiOjE3Mzg3MTQ0MjB9.xuPv-tg9iF8NkdbFi8D8mJyH7BfDsml-I4ipiLtwXTY
+
+### Exercise 3: new post by admin
+POST http://localhost:3000/exercise3/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM4NzEzNTIwLCJleHAiOjE3Mzg3MTQ0MjB9.xuPv-tg9iF8NkdbFi8D8mJyH7BfDsml-I4ipiLtwXTY
+
+{
+  "message": "New post from admin"
+}
+
+### Exercise 3: Sign in by User
+POST http://localhost:3000/exercise3/signin
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "userpass"
+}
+
+### Exercise 3: New post by user
+POST http://localhost:3000/exercise3/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTczODcxMzYwMiwiZXhwIjoxNzM4NzE0NTAyfQ.8QapAcUD0MSKqRdpkFj-XRouxf_KysAmw-9BzrXDpOA
+
+{
+  "message": "New post from user"
+}
+
+
+
+### Exercise 4: Refresh Token_Sign in by admin
+POST http://localhost:3000/exercise4/signin
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "adminpass"
+}
+
+### Exercise 4: Refresh Tokens_refresh access token
+POST http://localhost:3000/exercise4/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM4NzE2NzQ3LCJleHAiOjE3MzkzMjE1NDd9.Nd-f23NgHpjzslORWZi5sUgkOsrl6FqjF3pYGKShAIs"
+}
+
+### Exercise 4: Refresh Tokens_Logout(Invalid refresh token)
+POST http://localhost:3000/exercise4/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM4NzE2NzQ3LCJleHAiOjE3MzkzMjE1NDd9.Nd-f23NgHpjzslORWZi5sUgkOsrl6FqjF3pYGKShAIs"
+}
